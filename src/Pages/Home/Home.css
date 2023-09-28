@@ -1,0 +1,42 @@
+/* .to_do-app {
+  text-align: center;
+  width: 100%;
+  background-color: #eeeeee;
+  min-height: 100vh;
+  color: white;
+} */
+.to_do-home {
+  background-color: #eeeeee;
+}
+.to_do-input_button {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  max-width: 100%;
+  margin: 0rem 6rem;
+}
+
+.to_do-input {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 5;
+  width: 100%;
+}
+.to_do-input input {
+  margin: 0 auto;
+  outline: none;
+  border: none;
+  width: 100%;
+  height: 3.5rem;
+}
+.to_do-input textarea {
+  max-width: 100%;
+  padding: 1rem;
+  outline: none;
+  resize: none;
+  border: none;
+}
+.to_do-app_padding {
+  margin-top: 3rem;
+}

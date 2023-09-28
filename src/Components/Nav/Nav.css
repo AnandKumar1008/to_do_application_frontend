@@ -1,0 +1,105 @@
+.to_do-nav {
+  position: fixed;
+  top: 0;
+  height: 3rem;
+  background-color: aliceblue;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+.to_do-nav_top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style-type: none;
+  padding: 0 1rem;
+  height: 100%;
+}
+
+.to_do-nav_top li {
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  padding: 0 1rem;
+  white-space: nowrap;
+}
+.to_do-nav_top li:hover {
+  background-color: lightblue;
+}
+.to_do-nav_right {
+  list-style-type: none;
+  padding: 0 1rem;
+  height: 100%;
+  display: flex;
+  /* flex-direction: column; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* border: 1px solid red; */
+}
+.to_do-nav_profile {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  /* border: 1px solid red; */
+  cursor: pointer;
+  padding: 1rem;
+}
+.to_do-nav_profile div {
+  position: absolute;
+  right: 0;
+  top: 100%;
+}
+.to_do-nav_profile_hover {
+  display: none;
+  border: 1px solid #eeeeee;
+}
+.to_do-nav_profile_hover li {
+  white-space: nowrap;
+}
+.to_do-nav_profile:hover {
+  background-color: lightblue;
+}
+.to_do-nav_profile:hover .to_do-nav_profile_hover {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  /* padding: 1rem; */
+  cursor: auto;
+}
+.to_do-nav_profile_hover li {
+  text-align: start;
+  height: 100%;
+  width: 10rem;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+.to_do-nav_profile_hover ul {
+  list-style-type: none;
+  height: 100%;
+  width: 100%;
+}
+
+.to_do-user_image img {
+  /* max-width: 100%; */
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid black;
+}
+.to_do-nav_profile_hover ul li img {
+  width: 2rem;
+  width: 2rem;
+}

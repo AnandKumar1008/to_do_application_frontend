@@ -1,0 +1,19 @@
+.to_do-account {
+  min-height: 100vh;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* align-items: center; */
+}
+.to_do-account_cover {
+  width: 50%;
+  margin: 0 auto;
+  height: 100%;
+  border: 2px solid yellow;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  padding: 2rem;
+  justify-content: start;
+}

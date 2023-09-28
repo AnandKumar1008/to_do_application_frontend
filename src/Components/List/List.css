@@ -1,0 +1,15 @@
+.to_do-list {
+  background-color: #434242;
+  background-color: #5c5470;
+  background-color: #7091f5;
+  background-color: #85e6c5;
+  margin: 6rem;
+  padding: 0.5rem 0;
+}
+.to_do-list_task {
+  margin: 4rem 1rem;
+  text-align: start;
+}
+.to_do-list_button {
+  display: flex;
+}
