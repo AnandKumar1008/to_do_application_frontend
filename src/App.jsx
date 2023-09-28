@@ -19,7 +19,7 @@ const App = () => {
     setUserId,
     setUserName,
     setUpdate,
-    setAuthPage,
+
     loginPage,
     loading,
     setUserPhoto,
