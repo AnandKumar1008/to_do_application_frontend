@@ -16,6 +16,8 @@ const CreateAccount = () => {
     setUserName,
     setUserPhoto,
     setLogin,
+    setUpdate,
+    setUserId,
   } = useContext(MyContext);
   const [userDetail, setUserDetail] = useState({
     name: "",
@@ -48,6 +50,7 @@ const CreateAccount = () => {
 
         setLoginPage(true);
         setAuthPage(true);
+
         setMessage("Account Creation SuccessFull");
         setLoading(false);
       } catch (error) {
@@ -59,12 +62,38 @@ const CreateAccount = () => {
 
     create();
   };
+  const sendToBackend = async (name, email, password, userPhoto) => {
+    const userDetail = {
+      name,
+      email,
+      userPhoto,
+      password,
+    };
+    try {
+      const res = await axios.post(
+        `${BASE_URL}/api/v1/user/firebase`,
+        userDetail
+      );
+      const data = res.data;
+      setUserId(data.data._id);
+      localStorage.setItem("to_do_token", JSON.stringify(data.token));
+      setUpdate((p) => !p);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   const handleGoogle = () => {
     signInWithPopup(auth, provider)
       .then((result) => {
         setUserName(result.user.displayName);
         setLogin(true);
         setUserPhoto(result.user.photoURL);
+        sendToBackend(
+          result.user.displayName,
+          result.user.email,
+          "",
+          result.user.photoURL
+        );
         setAuthPage(false);
         setLoginPage(false);
       })
